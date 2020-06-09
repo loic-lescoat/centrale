@@ -10,9 +10,13 @@ module.exports.handle = async event => {
     const dynamoDb = new DynamoDB.DocumentClient();
 
     const item = {
-        type: 'items',
-        uuid: uuid.v1(),
-        content: data.content,
+        Type: 'movie',
+        Genre: data.Genre,
+        Name: data.Title,
+        Year: data.Year,
+        Country: data.Country,
+        Language: data.Language,
+        Actors: data.Actors,    
         createdAt: Date.now(),
     }
 
@@ -23,6 +27,10 @@ module.exports.handle = async event => {
 
     return {
         statusCode: 200,
+        headers: {
+            'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+            'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
+          },
         body: JSON.stringify(item),
     }
 }

@@ -11,6 +11,9 @@ provider:
         - dynamodb:Query
         - dynamodb:GetItem
         - dynamodb:PutItem
+        - dynamodb:Scan
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
       Resource:
         - 'Fn::GetAtt': [Table, Arn]
   environment:
@@ -25,17 +28,17 @@ functions:
           method: get
 
   get:
-    handler: functions/get.handle
+    handler: functions/Palier1/get.handle
     events:
       - http:
-          method: get
-          path: items/{id}
+          method: post
+          path: items/movies/
           cors:
             origin: http://localhost:3000
             allowCredentials: true
 
   create:
-    handler: functions/create.handle
+    handler: functions/Palier1/create.handle
     events:
       - http:
           method: post
@@ -45,15 +48,30 @@ functions:
             allowCredentials: true
 
   list:
-    handler: functions/list.handle
+    handler: functions/Palier1/list.handle
     events:
       - http:
           method: get
-          path: items
+          path: items/{type}
           cors:
             origin: http://localhost:3000
             allowCredentials: true
-
+  rate:
+    handler: functions/Palier2/rate_movie.handle
+    events:
+      - http:
+          method: post
+          path: items/movies/rate
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
+  delete:
+    handler: functions/Palier2/delete_movie.handle
+    events:
+      - http:
+          method: post
+          path: items/movies/delete
+                     
 custom:
   stageVars: ${file(./stage.${self:provider.stage}.yml)}
 

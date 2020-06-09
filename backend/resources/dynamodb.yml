@@ -4,13 +4,45 @@ Resources:
         Properties:
             TableName: ${self:service.name}-dynamodb
             AttributeDefinitions:
-                - AttributeName: type
+                - AttributeName: Name
                   AttributeType: S
-                - AttributeName: uuid
+                - AttributeName: Type
                   AttributeType: S
+                - AttributeName: Year
+                  AttributeType: S
+                - AttributeName: Language
+                  AttributeType: S   
+                - AttributeName: Country
+                  AttributeType: S 
             KeySchema:
-                - AttributeName: type
+                - AttributeName: Type
                   KeyType: HASH
-                - AttributeName: uuid
+                - AttributeName: Name 
                   KeyType: RANGE
             BillingMode: PAY_PER_REQUEST
+            LocalSecondaryIndexes:
+              - IndexName: byYear
+                KeySchema:
+                  - AttributeName: Type
+                    KeyType: HASH
+                  - AttributeName: Year
+                    KeyType: RANGE
+                Projection:
+                  ProjectionType: ALL
+              - IndexName: byLanguage
+                KeySchema:
+                  - AttributeName: Type
+                    KeyType: HASH
+                  - AttributeName: Language
+                    KeyType: RANGE
+                Projection:
+                  ProjectionType: ALL
+              - IndexName: byCountry
+                KeySchema:
+                  - AttributeName: Type
+                    KeyType: HASH
+                  - AttributeName: Country
+                    KeyType: RANGE
+                Projection:
+                  ProjectionType: ALL    
+                          
