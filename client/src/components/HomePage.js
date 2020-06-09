@@ -6,18 +6,11 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <header className="HomePage-header">
-        <img src={logo} className="HomePage-logo" alt="logo" />
+        <img src={logo} className="logo" alt="logo" />
         <p>
-          Edit <code>src/HomePage.js</code> and save to reload.
+          Waouh! Un super site pour voir des films!
         </p>
-        <a
-          className="HomePage-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
     </div>
   );
