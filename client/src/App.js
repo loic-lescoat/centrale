@@ -14,6 +14,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
 
 
 
@@ -71,9 +72,7 @@ function App() {
     </Nav>
     <Nav>
       <Nav.Link href="/recommandation">Recommande moi un film</Nav.Link>
-      {/* <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link> */}
+
     </Nav>
   </Navbar.Collapse>
 </Navbar>
