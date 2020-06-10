@@ -16,6 +16,18 @@ provider:
         - dynamodb:DeleteItem
       Resource:
         - 'Fn::GetAtt': [Table, Arn]
+        - 'Fn::Join':
+            - ''
+            - - 'Fn::GetAtt': [Table, Arn]
+              - /index/byYear
+        - 'Fn::Join':
+            - ''
+            - - 'Fn::GetAtt': [Table, Arn]
+              - /index/byCountry   
+        - 'Fn::Join':
+            - ''
+            - - 'Fn::GetAtt': [Table, Arn]
+              - /index/byLanguage        
   environment:
     tableName: ${self:service.name}-dynamodb
 
@@ -79,10 +91,19 @@ functions:
     events:
       - http:
           method: post
+          path: items/movies/filter
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true      
+  search:
+    handler: functions/Palier2/search.handle
+    events:
+      - http:
+          method: post
           path: items/movies/search
           cors:
             origin: http://localhost:3000
-            allowCredentials: true                     
+            allowCredentials: true                            
 custom:
   stageVars: ${file(./stage.${self:provider.stage}.yml)}
 

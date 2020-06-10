@@ -4,9 +4,9 @@ module.exports.handle = async event => {
     if (!process.env.tableName) {
         throw new Error('env.tableName must be defined');
     }
-    const data = JSON.parse(event.body)
+    const data = JSON.parse(event.body);
     const dynamoDb = new DynamoDB.DocumentClient();
-    const idName=data.IndexName
+    const idName=data.IndexName;
     if (idName){
         const result = await dynamoDb.query({
         TableName: process.env.tableName ,

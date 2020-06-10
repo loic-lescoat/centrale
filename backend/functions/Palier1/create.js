@@ -11,13 +11,15 @@ module.exports.handle = async event => {
 
     const item = {
         Type: 'movie',
-        Genre: data.Genre,
-        Name: data.Title,
+        Genre: data.Genre.split(','),
+        Name: data.Name,
         Year: data.Year,
         Country: data.Country,
         Language: data.Language,
-        Actors: data.Actors,    
+        Actors: data.Actors.split(','),    
         createdAt: Date.now(),
+        Poster: data.Poster,
+        Synopsis: data.Plot
     }
 
     await dynamoDb.put({
