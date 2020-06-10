@@ -12,15 +12,16 @@ module.exports.handle = async event => {
 
     const result = await dynamoDb.delete({
         TableName: process.env.tableName,
-        Key:{'Name':name,'type':type},
+        Key:{'Name':name,'Type':type},
+        ReturnValues:'ALL_OLD'
         }).promise();
 
     return {
         statusCode: 200,
         headers: {
-            'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+            'Access-Control-Allow-Origin': 'http://localhost:3000', // Required for CORS support to work
             'Access-Control-Allow-Credentials': true, // Required for cookies, authorization headers with HTTPS
           },
-        body: JSON.stringify(result.Attributes),
+        body:"You just deleted this item:"+ JSON.stringify(result.Attributes),
     }
 }

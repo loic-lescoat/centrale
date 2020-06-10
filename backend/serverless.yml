@@ -71,7 +71,18 @@ functions:
       - http:
           method: post
           path: items/movies/delete
-                     
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
+  filter:
+    handler: functions/Palier2/filter.handle
+    events:
+      - http:
+          method: post
+          path: items/movies/search
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true                     
 custom:
   stageVars: ${file(./stage.${self:provider.stage}.yml)}
 
