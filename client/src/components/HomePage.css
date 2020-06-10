@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+#commentary{
+  margin-top: 50px;
+}
+
 .HomePage-logo {
   animation: HomePage-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -9,14 +13,14 @@
 }
 
 .HomePage-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .HomePage-link {

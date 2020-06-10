@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./ListeDeFilms.css";
 
 const ListeDeFilms = () => {
   const [error, setError] = useState(null);
@@ -9,12 +10,12 @@ const ListeDeFilms = () => {
 
   const fetchExample = async () => {
     try {
-      // TODO remplacer par url de david
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+      const response = await fetch("https://bnbnyn5fg5.execute-api.eu-west-1.amazonaws.com/dev/items/movie");
       const responseJson = await response.json();
       setIsLoaded(true);
       setError(false);
-      setItems(responseJson.results);
+      setItems(responseJson);
+      console.log({responseJson});
     } catch (error) {
       setIsLoaded(true);
       setError(error);
@@ -29,22 +30,85 @@ const ListeDeFilms = () => {
   }, [fetchAgain]);
 
   const afficherFilms = () => {
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return (<div class="text-center" id="loading-div"><div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    </div>);
+    } else {
+    //   return (
+
+
+    //     <ul>
+    //       {items.map((item) =>
+    //       <li><a href={item.Poster}>{item.Name}</a></li>)}
+    //     </ul>
+    //   );
+    // }
+  
+    var url = "https://postman-echo.com/post";
+    // url = "/film";
     return (
       // <ul>
       //   {items.map((item) => (
       //     <li key={item.name}><a href={item.url}>{item.name}</a></li>
       //   ))}
       // </ul>
-      <p className="tmp">fasdf</p>
+      <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Liste de films</h1>
+          <p class="lead text-muted">Voici une liste de films que vous pouvez regarder</p>
+          <p>
+            {/* <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a> */}
+          </p>
+        </div>
+      </section>
+
+
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            
+          {items.map((item) => (
+          <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+          <form action={url} method="post">
+<input class="card-img-top" type="image" 
+src={item.Poster} alt="Movie Poster" />
+            <div class="card-body">
+              <p class="card-text">{item.Synopsis}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="submit" class="btn btn-sm btn-outline-secondary">Voir</button>
+                </div>
+
+                
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+        ))}
+
+          </div>
+        </div>
+      </div>
+    </main>
     );
   }
+}
 
 
   return (
     <div>
-    <p>hey ListeDeFilms.js</p>
     <div>
-    {/* <button onClick={triggerFetchAgain}>Fetch again</button> */}
     {afficherFilms()}
   </div>
   </div>

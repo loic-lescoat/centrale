@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import React, { useState, useEffect } from "react";
 
 const PokemonDisplayer = () => {
