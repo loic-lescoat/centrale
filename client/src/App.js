@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PokemonDisplayer from "./components/PokemonDisplayer";
 import ListeDeFilms from "./components/ListeDeFilms";
 import HomePage from "./components/HomePage";
-<<<<<<< HEAD
-// eslint-disable-next-line
-=======
 import Tmp from './components/Tmp';
 
 
@@ -21,7 +18,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
->>>>>>> 026bbe3306cd19e3ac553cf23dc7f6a07bd5ddc8
 function App() {
   return (
     // <Router>
