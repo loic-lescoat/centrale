@@ -77,8 +77,8 @@ def recom(notes,data):
         for film_noté in notes:
             score+=film["Simlist"][film_noté]*(notes[film_noté]-moyenne)
         scores_film[film["Name"]]=score
-    return sorted(scores_film.items(),key=lambda t:t[1])[0:3]
-    
+    return sorted(scores_film.items(),key=lambda t:t[1])[-3:-1]
+
 
 
 
