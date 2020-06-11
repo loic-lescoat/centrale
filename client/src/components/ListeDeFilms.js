@@ -10,7 +10,8 @@ const ListeDeFilms = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch("https://bnbnyn5fg5.execute-api.eu-west-1.amazonaws.com/dev/items/movie");
+      var listurl = "https://cx6p5gwi6f.execute-api.eu-west-1.amazonaws.com/dev/items/movie";
+      const response = await fetch(listurl);
       const responseJson = await response.json();
       setIsLoaded(true);
       setError(false);
@@ -48,8 +49,8 @@ const ListeDeFilms = () => {
     //   );
     // }
   
-    var url = "https://postman-echo.com/post";
-    // url = "/film";
+    // var url = "https://bnbnyn5fg5.execute-api.eu-west-1.amazonaws.com/dev/items/movies";
+    var urlbase = "/film";
     return (
       // <ul>
       //   {items.map((item) => (
@@ -78,14 +79,15 @@ const ListeDeFilms = () => {
             
           {items.map((item) => (
           <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-          <form action={url} method="post">
+          <div class="card mb-4 box-shadow carteDeFilm">
+          <form action={urlbase + "?Name=" + item.Name}>
 <input class="card-img-top" type="image" 
 src={item.Poster} alt="Movie Poster" />
             <div class="card-body">
               <p class="card-text">{item.Synopsis}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
+                  <input type="hidden" name="Name" value={item.Name}></input>
                   <button type="submit" class="btn btn-sm btn-outline-secondary">Voir</button>
                 </div>
 

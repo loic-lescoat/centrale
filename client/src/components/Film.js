@@ -1,50 +1,88 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Film.css";
-// import StarRatings from 'react-star-ratings';
 
 
 const Film = () => {
-    var imgurl = "https://images-na.ssl-images-amazon.com/images/I/81eKg7lCeYL._AC_SL1100_.jpg";
-    var title = "mon titre";
-    var anneeSortie = "2015";
 
-    // changeRating( newRating, name ) {
-    //     this.setState({
-    //       rating: newRating
-    //     });
-    //   };
+    const [response, setItems] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [fetchAgain, setFetchAgain] = useState(false);
 
-    return (
-    <div>
-        <div class="container">
+    const search = window.location.search;
+    const params = new URLSearchParams(search);
+    const Name = params.get('Name');
+    console.log({Name});
 
-<h1 class="my-4">{title}
-</h1>
+    const data = {"Name": Name, "Type": "movie"};
 
-<div class="row">
+    var url = "https://cx6p5gwi6f.execute-api.eu-west-1.amazonaws.com/dev/items/movies";
+  
 
-  <div class="col-md-8">
-    <img class="img-fluid" src={imgurl} alt="img here" />
+    const fetchMovieInfo = async () => {
+      fetch(url, {
+        method: 'POST', // or 'PUT'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(typeof(data));
+        console.log('Success:', data);
+        setItems(data);
+        setIsLoaded(true);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    }
+    useEffect(() => {
+      setIsLoaded(false);
+      fetchMovieInfo();
+      console.log('hey');
+      console.log(response);
+      for (var key in response) {
+        if (response.hasOwnProperty(key)) {
+            /* useful code here */
+            console.log({key});
+        }
+    }
+
+    }, [fetchAgain]);
+
+
+    // code pas utile pour cette question
+    if (isLoaded){
+      return (
+      <div class="container">
+
+  <h1 class="my-4">{response[0].Name}</h1>
+  <p class="my-4">{response[0].Year}</p>
+
+  <div class="row">
+
+    <div class="col-md-8">
+      <img class="img-fluid" src={response[0].Poster} alt="img here" width="400px"/>
+    </div>
+
+    <div class="col-md-4">
+      <p class="synopsis">{response[0].Synopsis}</p>
+      
+    </div>
+
   </div>
-
-  <div class="col-md-4">
-    <h3 class="my-3">{title}</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-    {/* <StarRatings
-        //   rating={this.state.rating}
-          starRatedColor="blue"
-          changeRating={alert}
-          numberOfStars={6}
-          name='rating'
-        /> */}
-      );
-  </div>
-
+      </div> 
+      
+    );
+} else {
+  return (<div class="text-center" id="loading-div"><div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
 </div>
-    </div>
-    </div>
-    
-  );
+</div>);
 };
 
+}
 export default Film;
+
+
