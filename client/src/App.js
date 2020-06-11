@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PokemonDisplayer from "./components/PokemonDisplayer";
 import ListeDeFilms from "./components/ListeDeFilms";
 import HomePage from "./components/HomePage";
+import Film from "./components/Film";
 import Tmp from './components/Tmp';
 
 
@@ -14,7 +15,6 @@ import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
 
 
 
@@ -54,12 +54,12 @@ function App() {
     <Router>
 
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="/">Le super site de David et Loïc</Navbar.Brand>
+  <Navbar.Brand href="/">Le site de David et Loïc</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
       <Nav.Link href="/liste_de_films">Liste de films</Nav.Link>
-      <Nav.Link href="/film_au_hasard">Film au hasard</Nav.Link>
+      {/* <Nav.Link href="/film_au_hasard">Film au hasard</Nav.Link>
       <NavDropdown title="Quel sentiment décrit le mieux ce que vous ressentez pour David et Loïc?" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Une indifférence profonde</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Une haine accablante</NavDropdown.Item>
@@ -68,7 +68,7 @@ function App() {
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Encore autre chose</NavDropdown.Item>
       </NavDropdown>
-      <Nav.Link href="/demo">exemple pokemon</Nav.Link>
+      <Nav.Link href="/demo">exemple pokemon</Nav.Link> */}
     </Nav>
     <Nav>
       <Nav.Link href="/recommandation">Recommande moi un film</Nav.Link>
@@ -103,6 +103,10 @@ function App() {
            <Route path='/recommandation'>
             {/* <Recommandation /> */}
             <p>a faire</p>
+           </Route>
+
+           <Route path='/film'>
+             <Film />
            </Route>
 
 
