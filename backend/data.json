@@ -1,0 +1,814 @@
+[
+    {
+       "PutRequest": {
+          "Item": {
+             "Name": {
+                "S": "Le Saigneur des Agneaux 1"
+             },
+             "Type": {
+                "S": "movie"
+             },
+             "Langue": {
+                "M": {
+                   "Français": {
+                      "S": "0"
+                   },
+                   "Anglais": {
+                      "S": "1"
+                   },
+                   "Allemand": {
+                      "S": "0"
+                   },
+                   "Espagnol": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Pays": {
+                "M": {
+                   "France": {
+                      "S": "1"
+                   },
+                   "USA": {
+                      "S": "1"
+                   },
+                   "Royaume-Uni": {
+                      "S": "1"
+                   },
+                   "Corée du Sud": {
+                      "S": "1"
+                   },
+                   "Espagne": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Acteurs": {
+                "M": {
+                   "Samuel Radcliff": {
+                      "S": "1"
+                   },
+                   "Emma Padson": {
+                      "S": "0"
+                   },
+                   "Bourse Willis": {
+                      "S": "0"
+                   },
+                   "Orlando Boom": {
+                      "S": "1"
+                   },
+                   "Elijah Boude": {
+                      "S": "0"
+                   },
+                   "Flobert Pattinson": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Genre": {
+                "M": {
+                   "Aventure": {
+                      "S": "0"
+                   },
+                   "Animation": {
+                      "S": "1"
+                   },
+                   "Horreur": {
+                      "S": "1"
+                   },
+                   "Fantastique": {
+                      "S": "1"
+                   },
+                   "Romantique": {
+                      "S": "1"
+                   },
+                   "Documentaire": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Simlist": {
+                "M": {
+                   "Le Saigneur des Agneaux 1": {
+                      "N": 1
+                   },
+                   "Le Saigneur des Agneaux 2": {
+                      "N": 0.6666667
+                   },
+                   "Le Saigneur des Agneaux 3": {
+                      "N": 0.52223295
+                   },
+                   "Le Saigneur des Agneaux 4": {
+                      "N": 0.6172134
+                   },
+                   "Harry Porteur, L'école des portiers": {
+                      "N": 0.48112524
+                   },
+                   "Harry Porteur, La Chambre des serrures": {
+                      "N": 0.57735026
+                   },
+                   "Harry Porteur, Le Poulailler de Mère-Grand": {
+                      "N": 0.6943651
+                   }
+                }
+             }
+          }
+       }
+    },
+    {
+       "PutRequest": {
+          "Item": {
+             "Name": {
+                "S": "Le Saigneur des Agneaux 2"
+             },
+             "Type": {
+                "S": "movie"
+             },
+             "Langue": {
+                "M": {
+                   "Français": {
+                      "S": "0"
+                   },
+                   "Anglais": {
+                      "S": "1"
+                   },
+                   "Allemand": {
+                      "S": "0"
+                   },
+                   "Espagnol": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Pays": {
+                "M": {
+                   "France": {
+                      "S": "0"
+                   },
+                   "USA": {
+                      "S": "1"
+                   },
+                   "Royaume-Uni": {
+                      "S": "1"
+                   },
+                   "Corée du Sud": {
+                      "S": "1"
+                   },
+                   "Espagne": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Acteurs": {
+                "M": {
+                   "Samuel Radcliff": {
+                      "S": "0"
+                   },
+                   "Emma Padson": {
+                      "S": "0"
+                   },
+                   "Bourse Willis": {
+                      "S": "1"
+                   },
+                   "Orlando Boom": {
+                      "S": "0"
+                   },
+                   "Elijah Boude": {
+                      "S": "1"
+                   },
+                   "Flobert Pattinson": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Genre": {
+                "M": {
+                   "Aventure": {
+                      "S": "1"
+                   },
+                   "Animation": {
+                      "S": "1"
+                   },
+                   "Horreur": {
+                      "S": "1"
+                   },
+                   "Fantastique": {
+                      "S": "1"
+                   },
+                   "Romantique": {
+                      "S": "1"
+                   },
+                   "Documentaire": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Simlist": {
+                "M": {
+                   "Le Saigneur des Agneaux 1": {
+                      "N": 0.6666667
+                   },
+                   "Le Saigneur des Agneaux 2": {
+                      "N": 1
+                   },
+                   "Le Saigneur des Agneaux 3": {
+                      "N": 0.52223295
+                   },
+                   "Le Saigneur des Agneaux 4": {
+                      "N": 0.6172134
+                   },
+                   "Harry Porteur, L'école des portiers": {
+                      "N": 0.38490018
+                   },
+                   "Harry Porteur, La Chambre des serrures": {
+                      "N": 0.38490018
+                   },
+                   "Harry Porteur, Le Poulailler de Mère-Grand": {
+                      "N": 0.6943651
+                   }
+                }
+             }
+          }
+       }
+    },
+    {
+       "PutRequest": {
+          "Item": {
+             "Name": {
+                "S": "Le Saigneur des Agneaux 3"
+             },
+             "Type": {
+                "S": "movie"
+             },
+             "Langue": {
+                "M": {
+                   "Français": {
+                      "S": "1"
+                   },
+                   "Anglais": {
+                      "S": "0"
+                   },
+                   "Allemand": {
+                      "S": "0"
+                   },
+                   "Espagnol": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Pays": {
+                "M": {
+                   "France": {
+                      "S": "1"
+                   },
+                   "USA": {
+                      "S": "0"
+                   },
+                   "Royaume-Uni": {
+                      "S": "1"
+                   },
+                   "Corée du Sud": {
+                      "S": "0"
+                   },
+                   "Espagne": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Acteurs": {
+                "M": {
+                   "Samuel Radcliff": {
+                      "S": "0"
+                   },
+                   "Emma Padson": {
+                      "S": "1"
+                   },
+                   "Bourse Willis": {
+                      "S": "0"
+                   },
+                   "Orlando Boom": {
+                      "S": "1"
+                   },
+                   "Elijah Boude": {
+                      "S": "0"
+                   },
+                   "Flobert Pattinson": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Genre": {
+                "M": {
+                   "Aventure": {
+                      "S": "1"
+                   },
+                   "Animation": {
+                      "S": "1"
+                   },
+                   "Horreur": {
+                      "S": "0"
+                   },
+                   "Fantastique": {
+                      "S": "1"
+                   },
+                   "Romantique": {
+                      "S": "1"
+                   },
+                   "Documentaire": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Simlist": {
+                "M": {
+                   "Le Saigneur des Agneaux 1": {
+                      "N": 0.52223295
+                   },
+                   "Le Saigneur des Agneaux 2": {
+                      "N": 0.52223295
+                   },
+                   "Le Saigneur des Agneaux 3": {
+                      "N": 1
+                   },
+                   "Le Saigneur des Agneaux 4": {
+                      "N": 0.6446584
+                   },
+                   "Harry Porteur, L'école des portiers": {
+                      "N": 0.6030227
+                   },
+                   "Harry Porteur, La Chambre des serrures": {
+                      "N": 0.30151135
+                   },
+                   "Harry Porteur, Le Poulailler de Mère-Grand": {
+                      "N": 0.48349378
+                   }
+                }
+             }
+          }
+       }
+    },
+    {
+       "PutRequest": {
+          "Item": {
+             "Name": {
+                "S": "Le Saigneur des Agneaux 4"
+             },
+             "Type": {
+                "S": "movie"
+             },
+             "Langue": {
+                "M": {
+                   "Français": {
+                      "S": "1"
+                   },
+                   "Anglais": {
+                      "S": "0"
+                   },
+                   "Allemand": {
+                      "S": "1"
+                   },
+                   "Espagnol": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Pays": {
+                "M": {
+                   "France": {
+                      "S": "0"
+                   },
+                   "USA": {
+                      "S": "1"
+                   },
+                   "Royaume-Uni": {
+                      "S": "1"
+                   },
+                   "Corée du Sud": {
+                      "S": "1"
+                   },
+                   "Espagne": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Acteurs": {
+                "M": {
+                   "Samuel Radcliff": {
+                      "S": "1"
+                   },
+                   "Emma Padson": {
+                      "S": "1"
+                   },
+                   "Bourse Willis": {
+                      "S": "0"
+                   },
+                   "Orlando Boom": {
+                      "S": "0"
+                   },
+                   "Elijah Boude": {
+                      "S": "0"
+                   },
+                   "Flobert Pattinson": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Genre": {
+                "M": {
+                   "Aventure": {
+                      "S": "1"
+                   },
+                   "Animation": {
+                      "S": "1"
+                   },
+                   "Horreur": {
+                      "S": "1"
+                   },
+                   "Fantastique": {
+                      "S": "1"
+                   },
+                   "Romantique": {
+                      "S": "0"
+                   },
+                   "Documentaire": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Simlist": {
+                "M": {
+                   "Le Saigneur des Agneaux 1": {
+                      "N": 0.6172134
+                   },
+                   "Le Saigneur des Agneaux 2": {
+                      "N": 0.6172134
+                   },
+                   "Le Saigneur des Agneaux 3": {
+                      "N": 0.6446584
+                   },
+                   "Le Saigneur des Agneaux 4": {
+                      "N": 1
+                   },
+                   "Harry Porteur, L'école des portiers": {
+                      "N": 0.5345225
+                   },
+                   "Harry Porteur, La Chambre des serrures": {
+                      "N": 0.5345225
+                   },
+                   "Harry Porteur, Le Poulailler de Mère-Grand": {
+                      "N": 0.71428573
+                   }
+                }
+             }
+          }
+       }
+    },
+    {
+       "PutRequest": {
+          "Item": {
+             "Name": {
+                "S": "Harry Porteur, L'école des portiers"
+             },
+             "Type": {
+                "S": "movie"
+             },
+             "Langue": {
+                "M": {
+                   "Français": {
+                      "S": "1"
+                   },
+                   "Anglais": {
+                      "S": "1"
+                   },
+                   "Allemand": {
+                      "S": "1"
+                   },
+                   "Espagnol": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Pays": {
+                "M": {
+                   "France": {
+                      "S": "1"
+                   },
+                   "USA": {
+                      "S": "0"
+                   },
+                   "Royaume-Uni": {
+                      "S": "1"
+                   },
+                   "Corée du Sud": {
+                      "S": "0"
+                   },
+                   "Espagne": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Acteurs": {
+                "M": {
+                   "Samuel Radcliff": {
+                      "S": "0"
+                   },
+                   "Emma Padson": {
+                      "S": "1"
+                   },
+                   "Bourse Willis": {
+                      "S": "0"
+                   },
+                   "Orlando Boom": {
+                      "S": "0"
+                   },
+                   "Elijah Boude": {
+                      "S": "0"
+                   },
+                   "Flobert Pattinson": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Genre": {
+                "M": {
+                   "Aventure": {
+                      "S": "0"
+                   },
+                   "Animation": {
+                      "S": "1"
+                   },
+                   "Horreur": {
+                      "S": "0"
+                   },
+                   "Fantastique": {
+                      "S": "1"
+                   },
+                   "Romantique": {
+                      "S": "0"
+                   },
+                   "Documentaire": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Simlist": {
+                "M": {
+                   "Le Saigneur des Agneaux 1": {
+                      "N": 0.48112524
+                   },
+                   "Le Saigneur des Agneaux 2": {
+                      "N": 0.38490018
+                   },
+                   "Le Saigneur des Agneaux 3": {
+                      "N": 0.6030227
+                   },
+                   "Le Saigneur des Agneaux 4": {
+                      "N": 0.5345225
+                   },
+                   "Harry Porteur, L'école des portiers": {
+                      "N": 1
+                   },
+                   "Harry Porteur, La Chambre des serrures": {
+                      "N": 0.33333334
+                   },
+                   "Harry Porteur, Le Poulailler de Mère-Grand": {
+                      "N": 0.35634834
+                   }
+                }
+             }
+          }
+       }
+    },
+    {
+       "PutRequest": {
+          "Item": {
+             "Name": {
+                "S": "Harry Porteur, La Chambre des serrures"
+             },
+             "Type": {
+                "S": "movie"
+             },
+             "Langue": {
+                "M": {
+                   "Français": {
+                      "S": "0"
+                   },
+                   "Anglais": {
+                      "S": "1"
+                   },
+                   "Allemand": {
+                      "S": "1"
+                   },
+                   "Espagnol": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Pays": {
+                "M": {
+                   "France": {
+                      "S": "0"
+                   },
+                   "USA": {
+                      "S": "0"
+                   },
+                   "Royaume-Uni": {
+                      "S": "0"
+                   },
+                   "Corée du Sud": {
+                      "S": "1"
+                   },
+                   "Espagne": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Acteurs": {
+                "M": {
+                   "Samuel Radcliff": {
+                      "S": "1"
+                   },
+                   "Emma Padson": {
+                      "S": "0"
+                   },
+                   "Bourse Willis": {
+                      "S": "0"
+                   },
+                   "Orlando Boom": {
+                      "S": "1"
+                   },
+                   "Elijah Boude": {
+                      "S": "1"
+                   },
+                   "Flobert Pattinson": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Genre": {
+                "M": {
+                   "Aventure": {
+                      "S": "0"
+                   },
+                   "Animation": {
+                      "S": "0"
+                   },
+                   "Horreur": {
+                      "S": "0"
+                   },
+                   "Fantastique": {
+                      "S": "1"
+                   },
+                   "Romantique": {
+                      "S": "0"
+                   },
+                   "Documentaire": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Simlist": {
+                "M": {
+                   "Le Saigneur des Agneaux 1": {
+                      "N": 0.57735026
+                   },
+                   "Le Saigneur des Agneaux 2": {
+                      "N": 0.38490018
+                   },
+                   "Le Saigneur des Agneaux 3": {
+                      "N": 0.30151135
+                   },
+                   "Le Saigneur des Agneaux 4": {
+                      "N": 0.5345225
+                   },
+                   "Harry Porteur, L'école des portiers": {
+                      "N": 0.33333334
+                   },
+                   "Harry Porteur, La Chambre des serrures": {
+                      "N": 1
+                   },
+                   "Harry Porteur, Le Poulailler de Mère-Grand": {
+                      "N": 0.5345225
+                   }
+                }
+             }
+          }
+       }
+    },
+    {
+       "PutRequest": {
+          "Item": {
+             "Name": {
+                "S": "Harry Porteur, Le Poulailler de Mère-Grand"
+             },
+             "Type": {
+                "S": "movie"
+             },
+             "Langue": {
+                "M": {
+                   "Français": {
+                      "S": "0"
+                   },
+                   "Anglais": {
+                      "S": "0"
+                   },
+                   "Allemand": {
+                      "S": "1"
+                   },
+                   "Espagnol": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Pays": {
+                "M": {
+                   "France": {
+                      "S": "1"
+                   },
+                   "USA": {
+                      "S": "1"
+                   },
+                   "Royaume-Uni": {
+                      "S": "1"
+                   },
+                   "Corée du Sud": {
+                      "S": "1"
+                   },
+                   "Espagne": {
+                      "S": "1"
+                   }
+                }
+             },
+             "Acteurs": {
+                "M": {
+                   "Samuel Radcliff": {
+                      "S": "1"
+                   },
+                   "Emma Padson": {
+                      "S": "0"
+                   },
+                   "Bourse Willis": {
+                      "S": "1"
+                   },
+                   "Orlando Boom": {
+                      "S": "1"
+                   },
+                   "Elijah Boude": {
+                      "S": "1"
+                   },
+                   "Flobert Pattinson": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Genre": {
+                "M": {
+                   "Aventure": {
+                      "S": "1"
+                   },
+                   "Animation": {
+                      "S": "1"
+                   },
+                   "Horreur": {
+                      "S": "1"
+                   },
+                   "Fantastique": {
+                      "S": "0"
+                   },
+                   "Romantique": {
+                      "S": "0"
+                   },
+                   "Documentaire": {
+                      "S": "0"
+                   }
+                }
+             },
+             "Simlist": {
+                "M": {
+                   "Le Saigneur des Agneaux 1": {
+                      "N": 0.6943651
+                   },
+                   "Le Saigneur des Agneaux 2": {
+                      "N": 0.6943651
+                   },
+                   "Le Saigneur des Agneaux 3": {
+                      "N": 0.48349378
+                   },
+                   "Le Saigneur des Agneaux 4": {
+                      "N": 0.71428573
+                   },
+                   "Harry Porteur, L'école des portiers": {
+                      "N": 0.35634834
+                   },
+                   "Harry Porteur, La Chambre des serrures": {
+                      "N": 0.5345225
+                   },
+                   "Harry Porteur, Le Poulailler de Mère-Grand": {
+                      "N": 1
+                   }
+                }
+             }
+          }
+       }
+    }
+ ]

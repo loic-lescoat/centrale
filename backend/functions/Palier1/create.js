@@ -12,7 +12,7 @@ module.exports.handle = async event => {
     const item = {
         Type: 'movie',
         Genre: data.Genre.split(','),
-        Name: data.Name,
+        Name: data.Title,
         Year: data.Year,
         Country: data.Country,
         Language: data.Language,
