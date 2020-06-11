@@ -19,6 +19,7 @@ const ListeDeFilms = () => {
       console.log({responseJson});
     } catch (error) {
       setIsLoaded(true);
+      console.log("error here");
       setError(error);
     }
   };

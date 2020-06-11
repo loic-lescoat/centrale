@@ -50,7 +50,6 @@ function App() {
     //     </Switch>
     //   </div>
     // </Router>
-
     <Router>
 
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -102,7 +101,7 @@ function App() {
            </Route>
            <Route path='/recommandation'>
             {/* <Recommandation /> */}
-            <p>a faire</p>
+            <p class="text-center" >À venir!</p>
            </Route>
 
            <Route path='/film'>
