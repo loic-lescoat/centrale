@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Film.css";
+import StarRatings from 'react-star-ratings';
+
 
 
 const Film = () => {
@@ -7,16 +9,39 @@ const Film = () => {
     const [response, setItems] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
     const [fetchAgain, setFetchAgain] = useState(false);
+    const [r, setR] = useState(1);
 
     const search = window.location.search;
     const params = new URLSearchParams(search);
     const Name = params.get('Name');
-    console.log({Name});
 
     const data = {"Name": Name, "Type": "movie"};
 
     var url = "https://cx6p5gwi6f.execute-api.eu-west-1.amazonaws.com/dev/items/movies";
-  
+    var rateUrl = "https://cx6p5gwi6f.execute-api.eu-west-1.amazonaws.com/dev/items/movies/rate";
+    // const hey = () => {
+    //   console.log('hey');
+    //   setR()
+    // }
+    function hey (newR, name) {
+      setR(newR);
+      fetch(rateUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({"Title": Name, "Type": "movie", "note": newR}),})
+        .then(response => response.json())
+      .then(data => {
+        console.log(typeof(data));
+        console.log('Success:', data);
+        // en faire qqchose
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      })
+      
+    };
 
     const fetchMovieInfo = async () => {
       fetch(url, {
@@ -68,7 +93,15 @@ const Film = () => {
 
     <div class="col-md-4">
       <p class="synopsis">{response[0].Synopsis}</p>
-      
+      <br></br>
+      <p class="synopsis">Notez ce film:</p>
+      <StarRatings
+          rating={r}
+          starRatedColor="red"
+          changeRating={hey}
+          numberOfStars={5}
+          name='rating'
+        />
     </div>
 
   </div>
