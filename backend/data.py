@@ -77,9 +77,11 @@ def recom(notes,data):
         for film_noté in notes:
             score+=film["Simlist"][film_noté]*(notes[film_noté]-moyenne)
         scores_film[film["Name"]]=score
-    return sorted(scores_film.items(),key=lambda t:t[1])[-3:-1]
+    return sorted(scores_film.items(),key=lambda t:t[1],reverse=True)[0:3]
 
-
+recom({"Le Saigneur des Agneaux 1":1,"Le Saigneur des Agneaux 2":3,\
+"Le Saigneur des Agneaux 3":5,"Le Saigneur des Agneaux 4":4,\
+"Harry Porteur, La Chambre des serrures":2})
 
 
 
